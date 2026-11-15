@@ -104,7 +104,7 @@ def run_benchmark() -> list[TaskResult]:
 def as_report(results: list[TaskResult]) -> dict[str, Any]:
     passed = sum(item.status == "PASS" for item in results)
     return {
-        "benchmark": "ml-leakage-benchmark",
+        "benchmark": "ml-validation-integrity-suite",
         "tasks": [asdict(item) for item in results],
         "summary": {"passed": passed, "total": len(results), "status": "PASS" if passed == len(results) else "FAIL"},
     }

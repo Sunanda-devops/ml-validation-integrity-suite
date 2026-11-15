@@ -60,14 +60,14 @@ python -m pip install -r requirements.txt
 ### Docker
 
 ```bash
-docker build -t ml-leakage-benchmark .
-docker run --rm ml-leakage-benchmark
+docker build -t ml-validation-integrity-suite .
+docker run --rm ml-validation-integrity-suite
 ```
 
 The image runs the complete pytest suite. For an interactive report inside the image:
 
 ```bash
-docker run --rm ml-leakage-benchmark python -m benchmark --format markdown
+docker run --rm ml-validation-integrity-suite python -m benchmark --format markdown
 ```
 
 ## Run the benchmark
@@ -170,7 +170,7 @@ Read the task's `test_grader.py` and compare the source markers with the intende
 Rebuild without relying on a cached dependency layer:
 
 ```bash
-docker build --no-cache -t ml-leakage-benchmark .
+docker build --no-cache -t ml-validation-integrity-suite .
 ```
 
 ### Generated files appear in Git
