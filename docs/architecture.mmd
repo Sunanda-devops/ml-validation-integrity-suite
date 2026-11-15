@@ -1,0 +1,16 @@
+flowchart LR
+  dataset[(Synthetic datasets)] --> task["Task fixtures"]
+  task --> starter["Starter: intentional failure"]
+  task --> solution["Solution: corrected implementation"]
+  solution --> runner["Deterministic benchmark runner"]
+  starter --> grader["Adversarial grader"]
+  runner --> report["Text / JSON / Markdown report"]
+  grader --> report
+  ci["GitHub Actions"] --> tests["pytest"]
+  ci --> runner
+
+  classDef fixture fill:#fbe4dc,stroke:#f26b4f,color:#17232c;
+  classDef code fill:#e9e5f5,stroke:#8475b9,color:#17232c;
+  classDef verify fill:#dcece6,stroke:#5c917e,color:#17232c;
+  class dataset,task,starter,solution fixture;
+  class runner,report,ci,tests,grader verify;
