@@ -1,6 +1,6 @@
-# ML Leakage & Validation Benchmark
+# ML Validation Integrity Suite
 
-A deterministic, adversarial benchmark for evaluating model-generated machine-learning code. It targets three failure classes that routinely survive superficial review: data leakage, invalid validation for temporal data, and unstable or irreproducible training.
+A deterministic, adversarial benchmark for evaluating model-generated machine-learning code. It targets three failure classes that routinely survive superficial review: data leakage, invalid validation for temporal data, and unstable or irreproducible training. The suite turns those concerns into task fixtures, explicit rubrics, executable graders, and repeatable reports.
 
 The repository contains intentionally flawed starters, corrected reference solutions, source-aware graders, a deterministic report runner, pinned dependencies, and GitHub Actions CI. It uses only synthetic data and makes no network calls.
 
